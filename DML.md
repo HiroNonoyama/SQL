@@ -1,6 +1,5 @@
-# DML(Data Maniplation Lang)
+# DML(Data Maniplation Lang) / SELECT
 
-## SELECT
 エクセルファイルの一つのタブから、特定の情報だけを一覧表示するイメージ
 
 ##### スタンダートな検索
@@ -53,4 +52,13 @@ SELECT class, COUNT(*), AVG(height)
 FROM Student
 GROUP BY class /* クラスごとに分類 */
 HAVING AVG(height) > 170 /* 平均身長が170以上のクラスのみを表示する */
+```
+
+## ORDER BY
+一番最後に配置するクエリ。並べ替えを行う
+
+```sql
+SELECT *
+FROM shohin
+ORDER BY id ASC(DESC) /* idを昇順(降順)に並べる */
 ```
