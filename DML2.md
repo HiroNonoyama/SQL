@@ -1,4 +1,16 @@
-# その他のDML / DELETE, UPDATE
+# その他のDML / INSERT, DELETE, UPDATE
+
+## INSERT
+レコードを追加する
+
+```sql
+INSERT INTO shohin (<field1>, <field2>, <field3>) VALUES ('0002', '2003-02-03', 1000);
+/* => INSERT INTO shohin VALUES ('0002', '2003-02-03', 1000); これも同じ結果*/
+
+INSERT INTO shohin_backup (<field1>, <field2>, <field3>)
+SELECT <field1>, <field2>, <field3>
+FROM shohin; /* shohinのレコード全部をshohin_backupにコピーする */
+```
 
 ## DELETE
 特定のレコードを削除する
